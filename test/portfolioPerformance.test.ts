@@ -8,4 +8,14 @@ describe("calculatePortfolioPerformance", () => {
         expect(result.percentageChange).toBe(60);
         expect(result.performanceSummary).toBe("Excellent performance! Your investments are doing great.")
     })
-})
+});
+
+describe("calculatePortfolioPerformance", () => {
+    it("should calculate 30% gain", () => {
+        const result = calculatePortfolioPerformance(10000, 13000);
+
+        expect(result.profitOrLoss).toBe(3000);
+        expect(result.percentageChange).toBe(30);
+        expect(result.performanceSummary).toBe("Excellent performance! Your investments are doing great.")
+    })
+});
