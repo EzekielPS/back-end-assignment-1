@@ -15,7 +15,7 @@ export function calculatePortfolioPerformance(initialInvestment: number, current
     let performanceSummary: string = "";
         switch (true) {
             case percentageChange >= 30:
-                performanceSummary = "Excellent performance! Your investmetns are doing great."
+                performanceSummary = "Excellent performance! Your investments are doing great."
             break;
 
             case percentageChange >= 10:
