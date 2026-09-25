@@ -32,3 +32,14 @@ describe("calculatePortfolioPerformance", () => {
         expect(result.performanceSummary).toBe("Solid gain. Keep monitoring your investments.")
     })
 });
+
+// 05 - Gain
+describe("calculatePortfolioPerformance", () => {
+    it("should calculate 10% gain", () => {
+        const result = calculatePortfolioPerformance(10000, 11000);
+
+        expect(result.profitOrLoss).toBe(1000);
+        expect(result.percentageChange).toBe(10);
+        expect(result.performanceSummary).toBe("Solid gain. Keep monitoring your investments.")
+    })
+});
