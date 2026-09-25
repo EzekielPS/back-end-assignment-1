@@ -54,3 +54,14 @@ describe("calculatePortfolioPerformance", () => {
         expect(result.performanceSummary).toBe("Modest gain. Your portfolio is growing slowly.")
     })
 });
+
+// 07 - Gain
+describe("calculatePortfolioPerformance", () => {
+    it("should calculate less than 1% gain", () => {
+        const result = calculatePortfolioPerformance(10000, 10000.1);
+
+        expect(result.profitOrLoss).toBe(0.1000000000003638);
+        expect(result.percentageChange).toBe(0.001000000000003638);
+        expect(result.performanceSummary).toBe("Modest gain. Your portfolio is growing slowly.")
+    })
+});
