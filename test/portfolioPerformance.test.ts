@@ -65,3 +65,14 @@ describe("calculatePortfolioPerformance", () => {
         expect(result.performanceSummary).toBe("Modest gain. Your portfolio is growing slowly.")
     })
 });
+
+// 08 - No Change
+describe("calculatePortfolioPerformance", () => {
+    it("should calculate 0% gain or no change", () => {
+        const result = calculatePortfolioPerformance(10000, 10000);
+
+        expect(result.profitOrLoss).toBe(0);
+        expect(result.percentageChange).toBe(0);
+        expect(result.performanceSummary).toBe("No change. Your portfolio is holding steady.")
+    })
+});
