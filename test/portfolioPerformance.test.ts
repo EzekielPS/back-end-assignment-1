@@ -98,3 +98,14 @@ describe("calculatePortfolioPerformance", () => {
         expect(result.performanceSummary).toBe("Minor loss. Stay calm and review your options.")
     })
 });
+
+// 11 - Loss
+describe("calculatePortfolioPerformance", () => {
+    it("should calculate less than -10% loss", () => {
+        const result = calculatePortfolioPerformance(10000, 8999.9);
+
+        expect(result.profitOrLoss).toBe(-1000.1000000000004);
+        expect(result.percentageChange).toBe(-10.001000000000005);
+        expect(result.performanceSummary).toBe("Significant loss. Review your portfolio strategy.")
+    })
+});
